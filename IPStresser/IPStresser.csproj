@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon>3792021-halloween-horror-skeleton-skull_109032.ico</ApplicationIcon>
+  </PropertyGroup>
+
+</Project>

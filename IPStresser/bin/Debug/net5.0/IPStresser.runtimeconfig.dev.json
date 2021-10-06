@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\imageworks\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\imageworks\\.nuget\\packages"
+    ]
+  }
+}
