@@ -9,8 +9,6 @@ namespace IPStresser
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             IPPinger myPinger = new IPPinger();
-            myPinger.PingIP();
-            myPinger.NumOfThreads();
         }
     }
 }
