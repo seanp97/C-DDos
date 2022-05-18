@@ -1,25 +1,35 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace IPNameSpace
+namespace IPPingerProject
 {
     class IPPinger
     {
         public static string IPAddress { get; set; }
+        public static int ThreadCount { get; set; }
+
+        public static int ThreadSleep { get; set; }
+
+        public static bool ShowConsole { get; set; }
+
+
+        public IPPinger(int threadCount, string ipAddress, int threadSleep = 0, bool showConsole = false)
+        {
+            ThreadCount = threadCount;
+            IPAddress = ipAddress;
+            ThreadSleep = threadSleep;
+            ShowConsole = showConsole;
+
+            PingIP();
+        }
+
         public void PingIP()
         {
-            Console.WriteLine("How many threads? ");
-            int ThreadCount = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("IP Address? ");
-            string ipAddress = Console.ReadLine();
-            IPAddress = ipAddress;
 
             for (int i = 0; i < ThreadCount; i++)
             {
@@ -35,12 +45,18 @@ namespace IPNameSpace
 
             try
             {
-                while (true)
+                while(true)
                 {
                     Ping pinger = new Ping();
                     byte[] packet = new byte[65500];
                     PingReply reply = pinger.Send(IPAddress, 120, packet);
-                    Console.WriteLine(reply.Status);
+
+                    if (ShowConsole)
+                    {
+                        Console.WriteLine(reply.Status.ToString());
+                    }
+
+                    Thread.Sleep(ThreadSleep);
                 }
 
             }
@@ -50,19 +66,6 @@ namespace IPNameSpace
                 Console.WriteLine(pingEx.ToString());
             }
 
-        }
-
-
-        public void NumOfThreads()
-        {
-            int threadCount = Process.GetCurrentProcess().Threads.Count;
-            
-
-            while(true)
-            {
-                Console.WriteLine($"Number of threads: {threadCount}");
-                Thread.Sleep(10000);
-            }
         }
     }
 }
