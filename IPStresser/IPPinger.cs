@@ -20,6 +20,7 @@ namespace IPPingerProject
 
         public IPPinger(int threadCount, string ipAddress, int threadSleep = 0, bool showConsole = false)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             ThreadCount = threadCount;
             IPAddress = ipAddress;
             ThreadSleep = threadSleep;
