@@ -18,7 +18,7 @@ namespace IPPingerProject
         public static bool ShowConsole { get; set; }
 
 
-        public IPPinger(int threadCount, string ipAddress, int threadSleep = 0, bool showConsole = false)
+        public IPPinger(string ipAddress, int threadCount, int threadSleep = 0, bool showConsole = false)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             ThreadCount = threadCount;
@@ -46,7 +46,7 @@ namespace IPPingerProject
 
             try
             {
-                while(true)
+                while (true)
                 {
                     Ping pinger = new Ping();
                     byte[] packet = new byte[65500];
