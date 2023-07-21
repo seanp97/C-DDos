@@ -1,5 +1,5 @@
 ﻿using System;
-using IPNameSpace;
+using IPPingerProject;
 
 namespace IPStresser
 {
@@ -7,7 +7,7 @@ namespace IPStresser
     {
         static void Main(string[] args)
         {
-            IPPinger myPinger = new IPPinger();
+            new IPPinger("111.222.73.102", 400);
         }
     }
 }

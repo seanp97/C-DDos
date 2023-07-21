@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2uxw3cC8G2t+Z1Kt83uT3lyRgOzBC22lB2u0ANZrJ+aicTczCP1ydHfMAiWOyQn/nKY77cN5i+tDXT6rM/EE8g==",
+  "dgSpecHash": "RYXlti514rFA2gtNjmKIC+qYjmHONleFHsWSAIm/jXi8rDqUSyZTh16Wq9M0CazJep5bA/lWJordjidBjZm01w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imageworks\\source\\repos\\IPStresser\\IPStresser\\IPStresser.csproj",
+  "projectFilePath": "C:\\Users\\seanp\\source\\repos\\C#-DDoS\\IPStresser\\IPStresser.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
